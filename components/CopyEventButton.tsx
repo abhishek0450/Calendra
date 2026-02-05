@@ -25,12 +25,12 @@ interface CopyEventButtonProps
 function getCopyLabel(state: CopyState) {
     switch (state) {
     case "copied":
-        return "Copied!"
+        return "Copied"
     case "error":
         return "Error"
     case "idle":
     default:
-        return "Copy Link"
+        return "Copy"
     }
 }
   

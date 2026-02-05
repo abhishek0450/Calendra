@@ -7,46 +7,51 @@ import Image from "next/image"
 
 export default function LandingPage() {
     return (
-        <main className="flex items-center p-10 gap-24 animate-fade-in max-md:flex-col">
+        <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-emerald-900 flex items-center justify-center p-6 animate-fade-in">
+        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
         {/* Section with branding, heading, subheading, and illustration */}
-        <section className="flex flex-col items-center">
+        <section className="flex flex-col space-y-8">
             {/* App Logo */}
-            <Image
-            src='/assets/logo.svg'
-            width={300}
-            height={300}
-            alt="Logo"
-            />
+            <div className="space-y-6">
+                
 
-             {/* Main Heading */}
-            <h1 className="text-2xl font-black lg:text-3xl">
-            Your time, perfectly planned
-            </h1>
+                 {/* Main Heading */}
+                <h1 className="text-5xl font-bold tracking-tight text-gray-100 leading-tight">
+                Smart scheduling
+                <span className="block text-emerald-400">made simple</span>
+                </h1>
 
-            {/* Subheading */}
-            <p className="font-extralight">
-            Join millions of professionals who easily book meetings with the #1 scheduling tool
-            </p>
+                {/* Subheading */}
+                <p className="text-lg text-gray-300 leading-relaxed">
+                Powerful, intuitive scheduling for teams and professionals. Manage your time efficiently and never miss a meeting.
+                </p>
+            </div>
 
              {/* Illustration below the text */}
             <Image
             src='/assets/planning.svg'
-            width={500}
-            height={500}
-            alt="Logo"
+            width={400}
+            height={400}
+            alt="Planning illustration"
+            className="hidden md:block opacity-70"
             />
         </section>
 
          {/* Clerk Sign-In Component with custom theme */}
-        <div className="mt-3">
-            <SignIn
-            routing="hash" // Keeps sign-in UI on the same page using hash-based routing
-            appearance={{
-                baseTheme: neobrutalism, // Applies the neobrutalism theme style to the sign-in UI
-            }}
-            />
+        <div className="flex justify-center md:justify-end">
+            <div className="bg-gray-800 rounded-2xl shadow-2xl p-2 border border-gray-700">
+                <SignIn
+                routing="hash"
+                appearance={{
+                    elements: {
+                        rootBox: "mx-auto",
+                        card: "shadow-none border-0 bg-gray-800",
+                    }
+                }}
+                />
+            </div>
         </div>
-
+        </div>
         </main>
 
     )

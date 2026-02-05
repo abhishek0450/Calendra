@@ -11,20 +11,16 @@ export default function PrivateNavBar() {
     const pathname = usePathname();
 
     return (
-        <nav className="flex justify-between items-center fixed z-50 w-full h-28 bg-gray-200 px-10 gap-4 shadow-2xl mb-28">
+        <nav className="flex justify-between items-center fixed z-50 w-full h-20 bg-gray-900/95 backdrop-blur-md px-8 border-b border-gray-700 shadow-lg">
               {/* Logo */}
-              <Link href="/events" className="flex items-center gap-1 hover:scale-150 duration-500 ">
-                <Image
-                  src="/assets/logo.svg"
-                  width={60}
-                  height={60}
-                  alt="Let's talk"
-                />
+              <Link href="/events" className="flex items-center gap-2 transition-opacity hover:opacity-70">
+                
+                <span className="text-xl font-semibold text-gray-100 max-sm:hidden">Schedule</span>
               </Link>
 
               {/* Nav Links */}
-              <section className="sticky top-0 flex justify-between text-black ">
-                <div className="flex flex-1 max-sm:gap-0 sm:gap-6">
+              <section className="flex items-center gap-1">
+                <div className="flex gap-1">
                   {PrivateNavLinks.map((item) => {
                     const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
                     
@@ -33,22 +29,23 @@ export default function PrivateNavBar() {
                         href={item.route}
                         key={item.label}
                         className={
-                          cn('flex gap-4 items-center p-4 rounded-lg justify-start hover:scale-150 duration-300 ',
-                            isActive && 'bg-blue-100 rounded-3xl'
+                          cn('flex gap-3 items-center px-4 py-2 rounded-lg transition-all duration-200',
+                            isActive 
+                              ? 'bg-emerald-500/20 text-emerald-400' 
+                              : 'text-gray-300 hover:bg-gray-800 hover:text-gray-100'
                           )
                         }
                       >
                         <Image
                           src={item.imgURL}
                           alt={item.label}
-                          width={30}
-                          height={30}
+                          width={20}
+                          height={20}
+                          className={cn(isActive && 'brightness-0 saturate-100 hue-rotate-180')}
                         />
                         
-                        
-                        
                         <p className={cn(
-                            "text-lg font-semibold max-lg:hidden",
+                            "text-sm font-medium max-lg:hidden"
                           )}>
                           {item.label}
                         </p>
@@ -59,12 +56,10 @@ export default function PrivateNavBar() {
               </section>    
 
               {/* User button */}
-              <div className='hover:scale-150 duration-500 '>
+              <div className='transition-opacity hover:opacity-70'>
                 <SignedIn>
-                    {/* Mount the UserButton component */}
                     <UserButton />
                 </SignedIn>
-        
               </div>    
 
         </nav>

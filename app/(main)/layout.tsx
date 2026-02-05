@@ -11,13 +11,13 @@ export default async function MainLayout({
     const user = await currentUser()
 
     return (
-        <main className="relative">
+        <main className="relative min-h-screen bg-gray-900">
             {/* Render PrivateNavBar if user exists, otherwise PublicNavBar */}
             {user ? <PrivateNavBar /> : <PublicNavBar />}
 
 
             {/* Render the children */}
-            <section className="pt-36 ">
+            <section className="pt-24 px-6">
                 {children}
             </section>
         </main>

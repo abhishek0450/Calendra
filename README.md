@@ -1,6 +1,6 @@
-# 📅 Calendra – A Modern Scheduling App
+# 📅 Schedule – A Modern Scheduling App
 
-Calendra is a fully-featured, production-ready scheduling application built with the latest web technologies. It allows users to manage their availability, let others book time with them, and sync events directly to Google Calendar—all while preventing double-bookings and timezone confusion.
+A fully-featured, production-ready scheduling application built with the latest web technologies. It allows users to manage their availability, let others book time with them, and sync events directly to Google Calendar—all while preventing double-bookings and timezone confusion.
 
 This project is perfect for showcasing full-stack skills using Next.js 15, React 19, and modern tooling. Whether you're looking to impress in your portfolio or deploy a real SaaS product, Calendra is built to scale.
 
@@ -27,4 +27,8 @@ This project is perfect for showcasing full-stack skills using Next.js 15, React
 | **Drizzle ORM** | Schema-first, type-safe queries |
 | **Google Calendar API** | Real-time calendar sync |
 | **Clerk** | Authentication and user management |
+
+
+## Screenshot
+<img width="1363" height="601" alt="Screenshot 2026-02-05 132224" src="https://github.com/user-attachments/assets/1020746c-5131-46ae-bb2d-df473de61629" />
 
