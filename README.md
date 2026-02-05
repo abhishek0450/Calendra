@@ -30,5 +30,6 @@ This project is perfect for showcasing full-stack skills using Next.js 15, React
 
 
 ## Screenshot
-<img width="1363" height="601" alt="Screenshot 2026-02-05 132224" src="https://github.com/user-attachments/assets/1020746c-5131-46ae-bb2d-df473de61629" />
+
+<img width="1365" height="603" alt="Screenshot 2026-02-05 135320" src="https://github.com/user-attachments/assets/03a8d39d-bfba-43a6-9cc2-0dec9bba6d22" />
 
